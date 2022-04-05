@@ -12,7 +12,7 @@ import math
 
 path = "./"
 file_list = os.listdir(path)
-file_list = [s for s in file_list if 'Hyeoksin' in s]
+file_list = [s for s in file_list if '2CSMHUNT' in s]
 print(file_list)
 
 
@@ -27,7 +27,7 @@ for datafile in file_list:
         counts = df[' COINC ']
 
 # fill histogram
-        h = TH1F('Detected Muon Multiplicity', 'Poisson Distribution of Cosmic Rays', 60, 200, 800)
+        h = TH1F('Detected Muon Multiplicity', 'Poisson Distribution of Cosmic Rays', 20, 200, 800)
         for i in counts:
                 h.Fill(i)
 
@@ -62,4 +62,4 @@ for datafile in file_list:
         h.Fit(f,"")
 
 
-        c.Print(Form("_Bin10_%s_"%tag))
+        c.Print(Form("2Bin30_%s_"%tag))
