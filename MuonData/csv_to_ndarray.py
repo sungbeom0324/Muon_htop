@@ -15,7 +15,7 @@ print(avg)
 #SOL2 : pandas.read_csv()
 print('pandas.read_csv()')
 import pandas as pd
-df = pd.read_csv('CSMHUNT_12300_2022-3-27_4-8-56_0327_30m.csv', sep = ';', dtype=np.float32)
+df = pd.read_csv('CSMHUNT_12300_2022-3-27_4-8-56_0327_30m.csv', sep = ';')
 data = df.values
 print(data)
 

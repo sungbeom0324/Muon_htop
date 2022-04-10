@@ -13,14 +13,14 @@ import math
 # read csv file
 #input_file = input("path of csv")
 #tag = input_file.split('_')
-df = pd.read_csv('/home/stiger97/muon2022/Gwang.csv', sep=';')
+df = pd.read_csv('/home/stiger97/muon2022/MuonData/day_Hae.csv', sep=';')
 drop_idx = df.loc[ df[' coinc ']!=' ABC'].index
 df = df.drop(drop_idx)
 #df = df.drop([0,1], axis=0)
 counts = df[' COINC ']
 
 # fill histogram
-h = TH1F('Detected Muon Multiplicity', 'Poisson Distribution of Cosmic Rays', 60, 200, 800)
+h = TH1F('Detected Muon Multiplicity', 'Poisson Distribution of Cosmic Rays', 100, 200, 800)
 for i in counts:
 	h.Fill(i)
 
@@ -55,7 +55,7 @@ gStyle.SetTitleY(0.97)
 h.Fit(f,"")
 
 #c.Print(Form("Poisson_%s"%tag))
-c.Print(Form("_Bin10_Gwang_2"))
+c.Print(Form("_Bin6_Hae_3"))
 
 
 '''

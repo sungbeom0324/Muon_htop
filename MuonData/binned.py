@@ -1,5 +1,5 @@
 # This is binned Poisson fitting for muon data
-# 4 spacebar!!!!!!!!!!!!!!
+# 4 space bar!
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
